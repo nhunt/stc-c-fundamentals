@@ -7,7 +7,7 @@ main(void)
    char name[256];
 
    fgets(name, sizeof name, stdin);
-   name[strcspn(name, "\n")] = '\0';
+   name[strcspn(name, "\r\n")] = '\0';
 
    printf("Hello, %s!\n", name);
    printf("Welcome to C.\n");

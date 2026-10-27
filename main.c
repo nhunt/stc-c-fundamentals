@@ -1,17 +1,21 @@
 #include <stdio.h>
-#include <string.h>
-
-#define MAXLINE 100
 
 int
 main(void)
 {
-   char line[MAXLINE];
+   int number;
 
-   fgets(line, sizeof line, stdin);
-   line[strcspn(line, "\n")] = '\0';
+   scanf("%d", &number);
 
-   printf("%zd\n", strlen(line));
+   if (number % 15 == 0) {
+      printf("FizzBuzz\n");
+   } else if (number % 3 == 0) {
+      printf("Fizz\n");
+   } else if (number % 5 == 0) {
+      printf("Buzz\n");
+   } else {
+      printf("%d\n", number);
+   }
 
    return 0;
 }

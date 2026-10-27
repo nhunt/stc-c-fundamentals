@@ -1,15 +1,15 @@
+#include <stdint.h>
 #include <stdio.h>
 
 int
 main(void)
 {
-   double a, b, sum;
+   int width, height;
 
-   scanf("%lf %lf", &a, &b);
-   sum = a + b;
+   scanf("%d %d", &width, &height);
 
-   printf("%.6f\n", sum);
-   printf("%d\n", (int)sum);
+   printf("%d\n", width * height);
+   printf("%.2f\n", (double)width / height);
 
    return 0;
 }

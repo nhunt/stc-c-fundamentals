@@ -1,14 +1,15 @@
+#include <inttypes.h>
 #include <stdint.h>
 #include <stdio.h>
 
 int
 main(void)
 {
-   int width, height;
+   uint64_t width, height;
 
-   scanf("%d %d", &width, &height);
+   scanf("%" SCNu64 " %" SCNu64, &width, &height);
 
-   printf("%d\n", width * height);
+   printf("%" PRIu64 "\n", width * height);
    printf("%.2f\n", (double)width / height);
 
    return 0;

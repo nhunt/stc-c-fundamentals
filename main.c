@@ -1,16 +1,15 @@
 #include <stdio.h>
-#include <string.h>
 
 int
 main(void)
 {
-   char name[256];
+   double a, b, sum;
 
-   fgets(name, sizeof name, stdin);
-   name[strcspn(name, "\r\n")] = '\0';
+   scanf("%lf %lf", &a, &b);
+   sum = a + b;
 
-   printf("Hello, %s!\n", name);
-   printf("Welcome to C.\n");
+   printf("%.6f\n", sum);
+   printf("%d\n", (int)sum);
 
    return 0;
 }
